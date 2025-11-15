@@ -41,7 +41,7 @@ on:
         description: '仅上传AK3压缩包?(无boot,下载更快)'
         required: false
         type: boolean
-        default: true
+        default: false
       build_time:
         description: '设置内核构建时间(格式见仓库说明)'
         required: false
@@ -71,5 +71,5 @@ jobs:
       use_bbg: ${{ inputs.use_bbg }}
       use_kpm: ${{ inputs.use_kpm }}
       supp_op: ${{ inputs.supp_op || false }}
-      onlyAk3: ${{ inputs.onlyAk3 || true }}
+      onlyAk3: ${{ inputs.onlyAk3 || false }}
       build_time: ${{ inputs.build_time || '' }}
